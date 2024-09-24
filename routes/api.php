@@ -16,10 +16,11 @@ Route::middleware('auth:api')->group(function () {
 
     Route::post('me', [AuthController::class, 'me']);
 
-    Route::get('/list-blogs', [BlogPostController::class, 'listBlogs']);
-    Route::get('/show-blog/{id}', [BlogPostController::class, 'showBlog']);
     Route::post('/add-blog-post', [BlogPostController::class, 'addBlog']);
     Route::put('/update-blog-post/{id}', [BlogPostController::class, 'updateBlog']);
     Route::delete('/delete-blog-post/{id}', [BlogPostController::class, 'deleteBlog']);
 
 });
+
+Route::get('/list-blogs', [BlogPostController::class, 'listBlogs']);
+Route::get('/show-blog/{id}', [BlogPostController::class, 'showBlog']);
