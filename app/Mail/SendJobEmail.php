@@ -25,7 +25,7 @@ class SendJobEmail extends Mailable
      */
     public function build()
     {
-        $mail = $this->markdown('send_email')->subject('Blog create notification email');
+        $mail = $this->markdown('send_email')->subject('Blog save notification email');
 
         return $mail;
     }
