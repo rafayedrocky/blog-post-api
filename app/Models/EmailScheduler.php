@@ -18,10 +18,5 @@ class EmailScheduler extends Model
     protected $fillable = [
         'id', 'title', 'body', 'is_send', 'email_send_time'
     ];
-
-    public function author()
-    {
-        return $this->belongsTo(User::class, 'author_id');
-    }
 }
 
